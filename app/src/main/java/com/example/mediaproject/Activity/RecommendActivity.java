@@ -214,21 +214,23 @@ public class RecommendActivity extends BaseActivity implements OnMapReadyCallbac
                         if (response.code() == 200) {
                             //int size = response.body().getList()
                         }
-                        String fd = response.body().getList().get(0).getPm10Grade1h();
-                        String ufd = response.body().getList().get(0).getPm25Grade1h();
 
-                        if(fd.equals("1")) fineDust.setText("좋음");
-                        else if(fd.equals("2")) fineDust.setText("보통");
-                        else if(fd.equals("3")) fineDust.setText("나쁨");
-                        else if(fd.equals("4")) fineDust.setText("매우나쁨");
-
-                        if(ufd.equals("1")) ultraFineDust.setText("좋음");
-                        else if(ufd.equals("2")) ultraFineDust.setText("보통");
-                        else if(ufd.equals("3")) ultraFineDust.setText("나쁨");
-                        else if(ufd.equals("4")) ultraFineDust.setText("매우나쁨");
-
-                        Log.d("airair", response.body().getList().get(0).getPm10Grade1h());
-                        Log.d("airair", response.body().getList().get(0).getPm25Grade1h());
+                        // 버그 발생, index 값 조정 필요
+//                        String fd = response.body().getList().get(0).getPm10Grade1h();
+//                        String ufd = response.body().getList().get(0).getPm25Grade1h();
+//
+//                        if(fd.equals("1")) fineDust.setText("좋음");
+//                        else if(fd.equals("2")) fineDust.setText("보통");
+//                        else if(fd.equals("3")) fineDust.setText("나쁨");
+//                        else if(fd.equals("4")) fineDust.setText("매우나쁨");
+//
+//                        if(ufd.equals("1")) ultraFineDust.setText("좋음");
+//                        else if(ufd.equals("2")) ultraFineDust.setText("보통");
+//                        else if(ufd.equals("3")) ultraFineDust.setText("나쁨");
+//                        else if(ufd.equals("4")) ultraFineDust.setText("매우나쁨");
+//
+//                        Log.d("airair", response.body().getList().get(0).getPm10Grade1h());
+//                        Log.d("airair", response.body().getList().get(0).getPm25Grade1h());
                     }
 
                     @Override
